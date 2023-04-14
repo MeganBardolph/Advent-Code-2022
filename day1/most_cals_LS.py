@@ -11,7 +11,19 @@ Created on Thu Apr 13 15:28:55 2023
 
 
 ## load input data from a txt file
-cals = open('inputdata_cals_exampledata.rtf').read() #example data - for accuracy check
+#rawdata = open('inputdata_cals_exampledata.txt').read() #example data - for accuracy check
+rawdata = open('inputdata_cals.txt').read() #input actual data
+data = rawdata.split('\n\n')
+total_cals_per_elf = []
+
+for item in data:
+    tmp = item.split('\n')
+    tmptmp = []
+    for i in tmp:
+        tmptmp.append(int(i))
+    total_cals_per_elf.append(sum(tmptmp))
+
+max_cals_elf = max(total_cals_per_elf)
 
 
 
