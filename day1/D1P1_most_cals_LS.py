@@ -19,7 +19,7 @@ data = rawdata.split('\n\n')
 
 ## calc total calories per elf
 ## call tot_cals_per_elf from day1_functions file
-from day1_functions import tot_cals_per_elf
+from day1_functions_LS import tot_cals_per_elf
 total_cals_per_elf = tot_cals_per_elf(data)
 
 
